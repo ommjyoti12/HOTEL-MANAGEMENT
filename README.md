@@ -22,7 +22,7 @@ Watch the project in action here:
 
 ## 🌟 Project Overview
 **Hotel Management System** is a full-stack web application that helps hotels manage their operations efficiently.  
-It allows management of **rooms, bookings, customers, and staff**, and provides reporting features.  
+It allows management of **rooms, bookings, and customers**, and provides reporting features.  
 
 **Tech Stack:** Node.js, Express.js, MongoDB, JavaScript, HTML/CSS
 
@@ -31,9 +31,9 @@ It allows management of **rooms, bookings, customers, and staff**, and provides 
 ## ✅ Features
 | Feature | Description |
 |---------|-------------|
-| 🛏️ Room Management | Add, update, and delete hotel rooms |
+| 🛏️ Room Management | Add, update, and delete hotel rooms, including room data |
 | 📋 Booking Management | Manage customer bookings and reservations |
-| 👥 Staff Management | Track staff details |
+| 🗂️ Room Data | Store and view detailed room information |
 | 📊 Reports | Generate reports for operations |
 
 ---
