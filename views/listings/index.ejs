@@ -1,0 +1,25 @@
+<% layout("/layout/boilerplate.ejs") %>
+<%- include("../partials/navbar") %>
+
+<div class="listing-container">
+  <% for (let listing of allListings) { %>
+
+    <a href="/listings/<%= listing._id %>" class="card-link">
+      <div class="listing-card">
+
+        <img src="<%= listing.image %>" alt="listing image">
+
+        <div class="card-body">
+          <h4><%= listing.location %>, <%= listing.country %></h4>
+          <p><%= listing.title %></p>
+
+          <p class="price">
+            ₹ <%= listing.price ? listing.price.toLocaleString("en-IN") : "N/A" %> / night
+          </p>
+        </div>
+
+      </div>
+    </a>
+
+  <% } %>
+</div>

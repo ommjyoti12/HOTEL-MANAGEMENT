@@ -1,0 +1,83 @@
+<% layout("/layout/boilerplate.ejs") %>
+<%- include("../partials/navbar") %>
+
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+
+      <div class="card shadow-lg p-4">
+        <h3 class="text-center mb-4">Edit Your Listing</h3>
+
+        <form method="POST" action="/listings/<%= listing._id %>?_method=PUT">
+
+          <div class="mb-3">
+            <label class="form-label">Title</label>
+            <input
+              name="listing[title]"
+              value="<%= listing.title %>"
+              type="text"
+              class="form-control"
+              required
+            />
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label">Description</label>
+            <textarea
+              name="listing[description]"
+              class="form-control"
+              rows="3"
+            ><%= listing.description %></textarea>
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label">Image URL</label>
+            <input
+              name="listing[image]"
+              value="<%= listing.image %>"
+              type="text"
+              class="form-control"
+            />
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label">Price (₹)</label>
+            <input
+              name="listing[price]"
+              value="<%= listing.price %>"
+              type="number"
+              class="form-control"
+              required
+            />
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label">Country</label>
+            <input
+              name="listing[country]"
+              value="<%= listing.country %>"
+              type="text"
+              class="form-control"
+            />
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label">Location</label>
+            <input
+              name="listing[location]"
+              value="<%= listing.location %>"
+              type="text"
+              class="form-control"
+            />
+          </div>
+
+          <div class="d-grid">
+            <button class="btn btn-dark">Update Listing</button>
+          </div>
+
+        </form>
+      </div>
+
+    </div>
+  </div>
+</div>

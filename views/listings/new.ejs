@@ -1,0 +1,105 @@
+
+<style>
+  body {
+    background: linear-gradient(135deg, #eef2f7, #d9e4f5);
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  }
+
+  .create-listing-page {
+    padding: 20px;
+  }
+
+  .listing-card {
+    background: #ffffff;
+    border: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .listing-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.18);
+  }
+
+  .listing-card h2 {
+    font-weight: 700;
+    color: #222;
+  }
+
+  .form-label {
+    font-weight: 600;
+    color: #444;
+  }
+
+  .form-control {
+    border-radius: 10px;
+    padding: 10px 12px;
+    border: 1px solid #ccc;
+  }
+
+  .form-control:focus {
+    border-color: #000;
+    box-shadow: 0 0 0 0.15rem rgba(0, 0, 0, 0.15);
+  }
+
+  textarea.form-control {
+    resize: none;
+  }
+
+  .btn-dark {
+    border-radius: 12px;
+    font-weight: 600;
+    padding: 12px;
+  }
+</style>
+ 
+<div class="create-listing-page"  >
+  <div class="container">
+    <div class="row justify-content-center align-items-center min-vh-100">
+      <div class="col-md-8 col-lg-6">
+
+        <div class="card listing-card shadow-lg p-4 rounded-4">
+          <h2 class="text-center mb-4">Create a New Listing</h2>
+
+          <form action="/listings" method="POST">
+
+            <div class="mb-3">
+              <label class="form-label">Title</label>
+              <input class="form-control" name="listing[title]" placeholder="Enter title" required>
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label">Description</label>
+              <textarea class="form-control" name="listing[description]" rows="3" placeholder="Enter description"></textarea>
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label">Image URL</label>
+              <input class="form-control" name="listing[image]" placeholder="Enter image URL">
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label">Price (₹)</label>
+              <input class="form-control" type="number" name="listing[price]" placeholder="Enter price">
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label">Country</label>
+              <input class="form-control" name="listing[country]" placeholder="Enter country">
+            </div>
+
+            <div class="mb-4">
+              <label class="form-label">Location</label>
+              <input class="form-control" name="listing[location]" placeholder="Enter location">
+            </div>
+
+            <div class="d-grid">
+              <button class="btn btn-dark btn-lg">Add Listing</button>
+            </div>
+
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>   
